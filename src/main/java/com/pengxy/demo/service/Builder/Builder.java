@@ -1,5 +1,9 @@
-package com.pengxy.demo.service;
+package com.pengxy.demo.service.Builder;
 
+
+/*
+部件类，包含组成的部件
+ */
 public class Builder {
     private String eyes;
     private String legs;
