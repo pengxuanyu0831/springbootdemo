@@ -24,7 +24,7 @@ public class OtherClass {
             public void run() {
                 synchronized (list){
                     for(int i = 0;i <list.size();i+=2){
-                        System.out.println("线程 " + Thread.currentThread().getName() +" 的打印结果："+ i);
+                        System.out.println("线程 " + Thread.currentThread().getName() +" 的打印结果："+ list.get(i));
                         list.notify();
                         try{
                             list.wait();
@@ -35,40 +35,43 @@ public class OtherClass {
                 }
             }
         },"A");
-//        {
+
+    // B 线程打印数字
+        Thread B = new Thread(new Runnable(){
+            @Override
+            public void run(){
+                synchronized (list){
+                    for(int i = 1;i < list.size();i+=2){
+                        System.out.println("线程 " + Thread.currentThread().getName() +" 的打印结果："+ list.get(i));
+                        list.notify();
+                        try{
+                            list.wait();
+                        }catch (InterruptedException e){
+                            e.printStackTrace();
+                        }
+                    }
+                }
+            }
+        },"B");
+        A.start();
+        B.start();
+//        new Thread(){
 //            @Override
-//            public void run(){
+//            public void  run(){
+//                //List list = Lists.newArrary()
 //                synchronized (list){
-//                    for(int i = 0;i <list.size();i+=2){
-//
-//                        try{
-//                            list.wait();
-//                        }catch (InterruptedException e){
-//                            e.printStackTrace();
-//                        }
+//                    for(int i = 1 ;i< list.size()+1;i+=3){
+//                        System.out.println("线程 " + Thread.currentThread().getName() +" 的打印结果："+ i);
+//                        list.notify();
+//                    }try{
+//                        list.wait();
+//                    }catch (InterruptedException e){
+//                        e.printStackTrace();
 //                    }
 //                }
 //
+//
 //            };
 //        }.start();
-    // B 线程打印数字
-        new Thread(){
-            @Override
-            public void  run(){
-                //List list = Lists.newArrary()
-                synchronized (list){
-                    for(int i = 1 ;i< list.size()+1;i+=3){
-                        System.out.println("线程 " + Thread.currentThread().getName() +" 的打印结果："+ i);
-                        list.notify();
-                    }try{
-                        list.wait();
-                    }catch (InterruptedException e){
-                        e.printStackTrace();
-                    }
-                }
-
-
-            };
-        }.start();
     }
 }
