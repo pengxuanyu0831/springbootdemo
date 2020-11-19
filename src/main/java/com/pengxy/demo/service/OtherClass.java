@@ -19,6 +19,7 @@ public class OtherClass {
     public static final List<String> list = asList("A","1","B","2","C","3","D","4");
     public static void main(String[] args) {
         // A 线程打印字母
+        // 匿名内部类创建线程，将Runnable作为对象传递给Thread
         Thread A = new Thread(new Runnable() {
             @Override
             public void run() {
