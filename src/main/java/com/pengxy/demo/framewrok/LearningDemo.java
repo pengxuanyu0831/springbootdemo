@@ -10,5 +10,4 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  */
 public class LearningDemo {
     ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
-
 }
