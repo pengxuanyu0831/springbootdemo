@@ -28,20 +28,20 @@ public class LearningDemo {
     public LearningDemo() throws IOException {
     }
 
-    private void scanPackage(String packageName){
-        Uri uri = this.getClass().getClassLoader().getResource(replaceTo(packageName));
-        String file  = uri.getFile();
-        File f = new Fill(file);
-
-        String[] list = f.list();
-        for(String path : list){
-            File filePath = new File(file + path);
-            if(filePath.isDirectory()){
-                // 递归
-                scanPackage(packageName + '.' + path);
-            }else {
-                classNames.add(packageName + '.'+path);
-            }
-        }
-    }
+//    private void scanPackage(String packageName){
+//        Uri uri = this.getClass().getClassLoader().getResource(replaceTo(packageName));
+//        String file  = uri.getFile();
+//        File f = new Fill(file);
+//
+//        String[] list = f.list();
+//        for(String path : list){
+//            File filePath = new File(file + path);
+//            if(filePath.isDirectory()){
+//                // 递归
+//                scanPackage(packageName + '.' + path);
+//            }else {
+//                classNames.add(packageName + '.'+path);
+//            }
+//        }
+//    }
 }
