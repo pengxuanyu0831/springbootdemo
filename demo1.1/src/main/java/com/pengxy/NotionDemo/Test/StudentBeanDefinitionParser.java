@@ -11,6 +11,7 @@ public class StudentBeanDefinitionParser extends AbstractSingleBeanDefinitionPar
         return Student.class;
     }
     // 从element中提取元素信息
+    @Override
     protected void doParse(Element element, BeanDefinitionBuilder beanDefinition){
         String studentName = element.getAttribute("studentName");
         String studentSex = element.getAttribute("studentSex");

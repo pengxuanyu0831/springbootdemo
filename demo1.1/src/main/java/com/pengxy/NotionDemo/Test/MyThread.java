@@ -1,5 +1,7 @@
 package com.pengxy.NotionDemo.Test;
 
+import java.lang.ref.SoftReference;
+
 /**
  * @program demo
  * @description: Thread Notion
@@ -9,6 +11,11 @@ package com.pengxy.NotionDemo.Test;
 public class MyThread implements Runnable {
     public void run(){
         // TODO
+        Object obj = new Object();
+        SoftReference softReference = new SoftReference<>(obj);
+        new Thread(()->{
+            //TODO
+        }).start();
     }
 
     public static void main(String[] args){
