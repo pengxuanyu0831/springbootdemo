@@ -40,9 +40,7 @@ public class ForkJoinDemo {
         try{
             Integer resule = taskFuture.get();
             System.out.println("result = " + resule);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        } catch (ExecutionException e) {
+        } catch (InterruptedException | ExecutionException e ) {
             e.printStackTrace();
         }
     }
