@@ -17,7 +17,7 @@ public class ForkJoinDemo {
         @Override
         protected Integer compute() {
             if(endValue - startValue <= MAX){
-                System.out.println("任务拆分 。。。 startValue:" + startValue + " endvalue： "+ endValue );
+                System.out.println("任务拆分 。。。 "+" 当前线程为: " + Thread.currentThread().getName() +" startValue:" + startValue + " endvalue： "+ endValue );
                 Integer totalValue = 0;
                 for(int index = this.startValue ;index <= endValue; index++ ){
                     totalValue += index;
