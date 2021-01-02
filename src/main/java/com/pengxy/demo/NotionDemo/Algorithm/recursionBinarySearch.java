@@ -1,7 +1,7 @@
 package com.pengxy.demo.NotionDemo.Algorithm;
 
 /**
- * @program key 查找的目标
+ * @program 二分法 demo
  * @param
  * @description:
  * @author: pengxuanyu
@@ -28,6 +28,7 @@ public class recursionBinarySearch {
 
     public static void main(String[] args) {
         int[] arry = {1,2,3,4,5,6,7,8};
+        // String[] arry1 = {"bill",""};
         int key = 1;
 
         int find = recursionBinarySearch(key,arry,0,arry.length -1);
