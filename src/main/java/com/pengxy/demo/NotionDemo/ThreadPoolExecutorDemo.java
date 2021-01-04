@@ -12,7 +12,11 @@ public class ThreadPoolExecutorDemo {
         Runnable runnable = () ->{
             try{
                 // TimeUnit.MINUTES.sleep(100);
-                System.out.println("lbwnb");
+                for(int i = 0;i <10 ;i++){
+                    System.out.println("lbwnb");
+                    System.out.println(Thread.currentThread().getName());
+                }
+
             } catch (Exception e) {
                 e.printStackTrace();
             }
