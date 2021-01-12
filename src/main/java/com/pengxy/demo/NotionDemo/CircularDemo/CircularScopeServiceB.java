@@ -6,7 +6,7 @@ import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-import javax.annotation.sql.DataSourceDefinition;
+//import javax.annotation.sql.DataSourceDefinition;
 
 /**
  * @program demo

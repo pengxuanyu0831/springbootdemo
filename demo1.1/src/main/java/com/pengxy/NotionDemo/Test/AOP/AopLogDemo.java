@@ -22,7 +22,6 @@ import org.apache.logging.log4j.Logger;
 @Component
 public class AopLogDemo {
 
-    Class clazz;
     private final static Logger logger = LogManager.getLogger(AopLogDemo.class);
 
 
