@@ -1,6 +1,6 @@
 import Dao.BookRepository;
 import Entity.Books;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -16,7 +16,7 @@ import java.util.List;
  */
 
 @RunWith(SpringRunner.class)
-@SpringBootTest
+@SpringBootTest(classes = {SpringbootElasticsearchApplicationTests.class})
 public class SpringbootElasticsearchApplicationTests {
     @Autowired
     BookRepository bookRepository;
