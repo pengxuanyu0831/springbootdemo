@@ -6,12 +6,14 @@ package com.pengxy.demo.service;
  * @author: pengxuanyu
  * @create: 2021/01/19 20:44
  */
-public class HungerSingleton {
+/*public class HungerSingleton {
     private static HungerSingleton hungerSingleton = new HungerSingleton();￿
+    String str  = new String("hello world ");
 
-    private HungerSingleton() {}
-
+    private HungerSingleton() {
+    }*/
+/*
     public static HungerSingleton getHungerSingleton() {
         return hungerSingleton;
     }
-}
+}*/

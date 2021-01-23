@@ -7,7 +7,8 @@ package com.pengxy.demo.service;
  * @create: 2021/01/19 20:38
  */
 public class LazySingleton {
-    private static LazySingleton lazySingleton;
+    // 私有的静态对象，保证对象唯一
+    private static LazySingleton lazySingleton = null;
 
     public LazySingleton() {
     }
