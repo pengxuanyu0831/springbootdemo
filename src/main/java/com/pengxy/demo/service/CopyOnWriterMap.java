@@ -6,6 +6,7 @@ import java.util.Map;
 import java.util.Set;
 
 public class CopyOnWriterMap<K,V> implements Map<K,V>,Cloneable {
+    // 临时map
     private volatile Map<K,V> interMap;
 
     public CopyOnWriterMap(){
